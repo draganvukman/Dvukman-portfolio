@@ -1,0 +1,1076 @@
+/* Font Lato & Roboto Slab */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab:wght@500;600;700&display=swap');
+
+:root {
+  --color-bg-primary: #295da9;
+  --color-bg-secondary: #dce4fd;
+  --color-red: #f8547b;
+  --color-sea: #54eef8;
+  --color-yellow: #f8e754;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--color-bg-primary);
+  color: var(--color-sea);
+  letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 128rem;
+  width: min(100% - 2.5rem);
+  margin: 0 auto;
+}
+
+.wrapper {
+  flex: 1;
+}
+
+.resume-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5rem;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Header */
+
+.header {
+  background-color: var(--color-bg-secondary);
+  padding: 15px 0;
+  margin-top: 3.5rem;
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.header-logo > img {
+  width: 8rem;
+}
+
+.header-navbar {
+  display: flex;
+  align-items: center;
+  column-gap: 3.5rem;
+  color: var(--color-black);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  transition: all 250ms ease-in-out;
+}
+
+.header-nav-link {
+  border-bottom: 2px solid transparent;
+}
+
+.header-nav-link:hover {
+  border-bottom: 2px solid var(--color-black);
+}
+
+.header-nav-link.active {
+  color: var(--color-red);
+  border-bottom: 2px solid var(--color-red);
+}
+
+.header-nav-btn {
+  display: block;
+  width: 10rem;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.mobile-icon {
+  display: none;
+}
+
+/* Home-Hero-Section */
+
+.home-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.5rem;
+  margin: 12rem 0;
+  flex-wrap: wrap;
+}
+
+.home-hero-image,
+.home-hero-description {
+  flex: 1 1 33.333%;
+}
+
+.home-hero-description-about {
+  border-left: 20px solid var(--color-sea);
+  padding-left: 15px;
+}
+
+.home-hero-description-about-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 5.5rem;
+  font-weight: 600;
+  line-height: 6.5rem;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+
+.home-hero-description-about-subtitle {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3.4rem;
+  color: var(--color-yellow);
+  margin-bottom: 1.5rem;
+}
+
+.home-hero-description-btn {
+  display: block;
+  width: 100%;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-top: 2.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-black);
+  padding: 45px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-text {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  column-gap: 2.5rem;
+}
+
+.footer-socials-link {
+  font-size: 2.2rem;
+  transition: all 250ms ease;
+}
+
+.footer-socials-link:hover {
+  color: var(--color-red);
+}
+
+/* ---------------------------About-Page--------------------------- */
+.about {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem 10rem;
+  margin: 12rem 0;
+  flex-wrap: wrap;
+}
+
+.about-description,
+.about-achievements {
+  flex: 1 1 33.333%;
+}
+
+.about-description-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 5.5rem;
+  color: var(--color-white);
+  margin-bottom: 2.5rem;
+}
+
+.about-description-box {
+  line-height: 2.4rem;
+}
+
+.about-description-box > img {
+  float: left;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--color-bg-secondary);
+  margin-right: 12px;
+}
+
+.about-achievements {
+  margin-top: 25rem;
+  padding-left: 15px;
+  border-left: 20px solid var(--color-sea);
+  color: var(--color-white);
+}
+
+.about-achievements-list-count {
+  margin-top: 5px;
+}
+
+.about-achievements-list {
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+
+.about-achievements-list:last-child {
+  margin-bottom: 0;
+}
+
+.about-achievements-list-count {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3.4rem;
+}
+
+/* ---------------------------Hobbies-Page--------------------------- */
+.hobbies {
+  margin: 12rem 0;
+}
+
+.hobbies-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 5.5rem;
+  color: var(--color-white);
+  margin-bottom: 3.5rem;
+}
+
+.hobbies-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem 3.5rem;
+  flex-wrap: wrap;
+}
+
+.hobbies-card {
+  flex: 1 1 35rem;
+  text-align: center;
+  transition: all 250ms linear;
+}
+
+.hobbies-card:hover {
+  transform: rotate(5deg);
+}
+
+.hobbies-card > img {
+  border: 5px solid var(--color-red);
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.hobbies-card-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3.4rem;
+  color: var(--color-white);
+  margin-top: 0.5rem;
+}
+
+/* ---------------------------Portfolio-Page--------------------------- */
+.portfolio {
+  margin: 12rem 0;
+}
+
+.portfolio-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 5.5rem;
+  color: var(--color-white);
+  margin-bottom: 2.5rem;
+}
+
+.portfolio-content {
+  width: 65%;
+}
+
+.portfolio-text-link {
+  padding: 0 5px;
+  font-size: 1.8rem;
+  color: var(--color-yellow);
+  vertical-align: middle;
+}
+
+.portfolio-text {
+  margin-top: 0.5rem;
+}
+
+.portfolio-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 3.5rem;
+  margin-top: 5rem;
+}
+
+.portfolio-card {
+  text-align: center;
+  transition: all 250ms linear;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+}
+
+.portfolio-card:nth-child(1) > img {
+  object-position: center;
+}
+
+.portfolio-card > img {
+  width: 100%;
+  height: 33rem;
+  object-fit: cover;
+  object-position: top;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.portfolio-card-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3.4rem;
+  color: var(--color-white);
+  margin-top: 0.5rem;
+}
+
+.portfolio-card-text {
+  color: var(--color-yellow);
+}
+
+/* ---------------------------Blogs-Page--------------------------- */
+
+.blogs {
+  margin: 12rem 0;
+}
+
+.blogs-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 5.5rem;
+  color: var(--color-white);
+  margin-bottom: 3.5rem;
+}
+
+.blogs-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5rem 2.5rem;
+}
+
+.blogs-card {
+  flex: 1 1 35rem;
+  box-shadow: rgba(255, 255, 255, 0.05) 0px 6px 24px 0px,
+    rgba(255, 255, 255, 0.08) 0px 0px 0px 1px;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.blogs-card > img {
+  display: block;
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.blogs-card-body {
+  padding: 15px;
+}
+
+.blogs-card-title {
+  font-size: 1.8rem;
+  line-height: 1.35;
+  font-weight: 700;
+  margin: 1.5rem 0 0.8rem;
+  color: var(--color-white);
+}
+
+.blogs-card-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.blogs-card-desc {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 1.5rem;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.blogs-card-img > img {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.blogs-card-name,
+.blogs-card-time {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: var(--color-red);
+}
+
+/* ---------------------------Blog-Post--------------------------- */
+
+.post {
+  margin: 12rem 0;
+}
+
+.post-container {
+  max-width: 92rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 25px;
+  box-shadow: rgba(255, 255, 255, 0.05) 0px 6px 24px 0px,
+    rgba(255, 255, 255, 0.08) 0px 0px 0px 1px;
+  border-radius: 5px;
+}
+
+.post-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-white);
+  text-align: center;
+  margin: 0.95rem 0;
+}
+
+.post-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.post-author,
+.post-time,
+.post-duration {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-red);
+}
+
+.post-time,
+.post-duration {
+  color: var(--color-sea);
+}
+
+.post-duration > i {
+  color: var(--color-yellow);
+  font-size: 1.3rem;
+  padding-left: 5px;
+}
+
+.post-hero {
+  margin: 2.5rem 0;
+}
+
+.post-hero > img {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.post-data p {
+  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+}
+
+.special-text-box {
+  margin: 2.5rem 0;
+  font-size: 2.2rem;
+  color: var(--color-bg-secondary);
+  padding: 0 2.5rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.post-ref-link {
+  text-decoration: underline;
+  color: var(--color-white);
+}
+
+.post-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.post-reactions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+  column-gap: 1.5rem;
+  color: var(--color-yellow);
+}
+
+.post-reactions-item {
+  display: flex;
+  align-items: center;
+  column-gap: 2.5rem;
+}
+
+.post-reactions-item a {
+  font-size: 2.2rem;
+}
+
+.react-no {
+  color: var(--color-white);
+  font-size: 1.8rem;
+  padding-left: 0.5rem;
+}
+
+/* ---------------------------Contact-Page--------------------------- */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem 10rem;
+  margin: 12rem 0;
+  flex-wrap: wrap;
+}
+
+.contact-content,
+.contact-form {
+  flex: 1 1 33.333%;
+}
+
+.contact-content-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 5.5rem;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+.contact-content-subtitle {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3.4rem;
+  color: var(--color-yellow);
+  margin-bottom: 1.5rem;
+}
+
+.contact-content > img {
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.form-control {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-control:last-child {
+  margin-bottom: 0;
+}
+
+.form-control > label {
+  font-size: 1.8rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--color-bg-secondary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.85rem;
+  color: var(--color-bg-primary);
+}
+
+.form-control > input,
+.form-control > textarea {
+  display: block;
+  background-color: transparent;
+  background-color: var(--color-bg-secondary);
+  border: 0;
+  width: 100%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 12px 10px;
+  border-radius: 5px;
+  color: var(--color-black);
+  outline-color: var(--color-sea);
+}
+
+.form-control small {
+  color: #e74c3c;
+  font-weight: 600;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form-control > textarea {
+  height: 18rem;
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  text-align: center;
+  padding: 12px 15px;
+  border-radius: 5px;
+  border: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.swal2-title {
+  font-size: 2.8rem;
+}
+
+.swal2-html-container {
+  font-size: 1.8rem;
+}
+
+/* ---------------------------Resume-Page--------------------------- */
+.resume {
+  margin: 12rem 0;
+}
+
+.resume-box {
+  width: 65%;
+}
+
+.resume-box-title,
+.resume-skills-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 5.5rem;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+
+.resume-box .resume-btn {
+  width: 50%;
+}
+
+.resume-content {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.5rem 10rem;
+  flex-wrap: wrap;
+}
+
+.resume-image {
+  width: 28rem;
+}
+
+.resume-image > img {
+  width: 100%;
+}
+
+.resume-skills {
+  flex: 1;
+}
+
+.resume-skills-list {
+  border-left: 20px solid var(--color-sea);
+  margin-top: 3.5rem;
+  padding: 10px 0;
+  padding-left: 15px;
+}
+
+.resume-skills-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.resume-skills-list-item:last-child {
+  margin-bottom: 0;
+}
+
+.resume-skills-list-item-name {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-white);
+  width: 9.5rem;
+}
+
+.resume-skills-list-item-circles {
+  display: flex;
+  align-items: center;
+  column-gap: 0.85rem;
+}
+
+.resume-skills-list-item-circle {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+}
+
+.resume-skills-list-item-circle.fill {
+  background-color: var(--color-yellow);
+}
+
+.resume-skills-list-item-value {
+  display: block;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.back-btn {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+/* Gallery */
+.gallery {
+  margin: 12rem 0;
+}
+
+.gallery-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  line-height: 5.5rem;
+  color: var(--color-white);
+  margin-bottom: 3.5rem;
+}
+
+.gallery-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+  width: 100%;
+  height: calc(100vh - 25rem);
+}
+
+.gallery-box {
+  flex: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  border: 2px solid var(--color-bg-secondary);
+  border-radius: 10px;
+  line-height: 0;
+}
+
+.gallery-box > img {
+  width: 200%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.gallery-box:hover {
+  flex: 1 1 50%;
+}
+
+.gallery-box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Media Queries */
+
+@media (max-width: 1050px) {
+  .resume-content {
+    column-gap: 3.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-navbar {
+    column-gap: 2.5rem;
+  }
+
+  .home-hero {
+    column-gap: 1.5rem;
+  }
+
+  .home-hero-description-about-title {
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-description-title,
+  .portfolio-title,
+  .contact-content-title,
+  .resume-box-title,
+  .resume-skills-title,
+  .hobbies-title,
+  .blogs-title,
+  .gallery-title {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+  }
+
+  .home-hero-description-about-subtitle,
+  .about-achievements-list-count,
+  .portfolio-card-title,
+  .contact-content-subtitle,
+  .hobbies-card-title {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .home-hero-description-about,
+  .about-achievements {
+    border-left: 15px solid var(--color-sea);
+  }
+
+  .about,
+  .contact {
+    column-gap: 5rem;
+  }
+
+  .resume-image {
+    display: none;
+  }
+}
+
+@media (max-width: 865px) {
+  .home-hero {
+    flex-direction: column;
+  }
+
+  .home-hero-image {
+    width: 55rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .home-hero-description-btn {
+    width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header-nav-btn {
+    display: none;
+  }
+
+  .mobile-icon {
+    display: block;
+    font-size: 2.4rem;
+    cursor: pointer;
+    color: var(--color-black);
+  }
+
+  .header-navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    border-top: 2px solid #fafafa;
+    align-items: flex-start;
+    background: var(--color-bg-secondary);
+    padding: 1.5rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    gap: 1.5rem;
+  }
+
+  .header-navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .about-achievements {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 1.5rem;
+  }
+
+  .about-achievements-list {
+    margin-bottom: 0;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .resume-content {
+    margin-top: 5rem;
+  }
+
+  .resume-skills-list {
+    margin-top: 2.5rem;
+  }
+
+  .resume-box {
+    width: 100%;
+  }
+
+  .portfolio-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-hero,
+  .about,
+  .portfolio,
+  .contact,
+  .resume,
+  .hobbies,
+  .post,
+  .blogs,
+  .gallery {
+    margin: 7rem 0;
+  }
+
+  .footer {
+    padding: 25px 0;
+  }
+
+  .footer-text {
+    font-size: 1.6rem;
+  }
+
+  .footer-content {
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+
+  .about-achievements {
+    flex-direction: column;
+    row-gap: 5rem;
+  }
+
+  .resume-skills-list-item-circles {
+    display: none;
+  }
+
+  .resume-box .resume-btn {
+    width: 100%;
+  }
+
+  .gallery-cards {
+    gap: 1.5rem;
+  }
+
+  .gallery-box:hover {
+    flex: 1 1 65%;
+  }
+}

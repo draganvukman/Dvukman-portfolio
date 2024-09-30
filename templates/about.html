@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/favicon.png') }}"
+      type="image/x-icon"
+    />
+    <title>Dragan Vukman - About</title>
+    <!-- Font Awesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <div class="header-content">
+            <a href="/" class="header-logo">
+              <img
+                src="{{ url_for('static', filename='images/site-logo.svg') }}"
+                alt="Three square box logo"
+              />
+            </a>
+            <nav class="header-navbar">
+              <a href="/" class="header-nav-link">Home</a>
+              <a href="/about" class="header-nav-link active">About</a>
+              <a href="/portfolio" class="header-nav-link">Portfolio</a>
+              <a href="/blogs" class="header-nav-link">Blogs</a>
+              <a href="/hobbies" class="header-nav-link">Hobbies</a>
+              <a href="/gallery" class="header-nav-link">Gallery</a>
+              <a href="/resume" class="header-nav-link">Resume</a>
+              <a href="/contact" class="header-nav-link">Contact</a>
+            </nav>
+            <a href="/contact" class="header-nav-btn">Hire Me</a>
+            <i class="mobile-icon fas fa-bars"></i>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main-Content -->
+      <main class="main">
+        <div class="container">
+          <!-- About-Section -->
+          <section class="about">
+            <div class="about-description">
+              <h2 class="about-description-title">About Me</h2>
+              <div class="about-description-box">
+                <img
+                  src="{{ url_for('static', filename='images/icon-5359553_640.png') }}"
+                  alt="Dragan Vukman Profile"
+                />
+
+                Hello 👋, This is Dragan Vukman. I am graduate of Information
+                and Communication Technology. I am doing a course of Full Stack
+                Software Development, UCD in Dublin, Ireland. A self-motivated,
+                enthusiastic, result-oriented young person seeking a part-time
+                job. I believe that my ability to tackle hard tasks, dedication
+                to the work do make me feel like a suitable candidate for any
+                job.
+                <p class="about-description-box-text">
+                  I am a big fan of sports and I love playing basketball. I do
+                  side projects in my free time to enhance my skills.
+                </p>
+              </div>
+              <a
+                href="{{ url_for('static', filename='images/Dragan Vukman.pdf') }}"
+                class="resume-btn"
+              >
+                Resume
+                <i class="fas fa-file-download"></i>
+              </a>
+            </div>
+
+            <ul class="about-achievements">
+              <li class="about-achievements-list">
+                <span class="about-achievements-list-icon">
+                  <img
+                    src="{{ url_for('static', filename='images/tick-icon.svg') }}"
+                    alt="Tick Icon"
+                  />
+                </span>
+                <span class="about-achievements-list-count">245</span>
+                <span class="about-achievements-list-text"
+                  >Completed Projects</span
+                >
+              </li>
+              <li class="about-achievements-list">
+                <span class="about-achievements-list-icon">
+                  <img
+                    src="{{ url_for('static', filename='images/diamond-icon.svg') }}"
+                    alt="Diamond Icon"
+                  />
+                </span>
+                <span class="about-achievements-list-count">10</span>
+                <span class="about-achievements-list-text">Awards Won</span>
+              </li>
+              <li class="about-achievements-list">
+                <span class="about-achievements-list-icon">
+                  <img
+                    src="{{ url_for('static', filename='images/emoji-icon.svg') }}"
+                    alt="Emoji Icon"
+                  />
+                </span>
+                <span class="about-achievements-list-count">65</span>
+                <span class="about-achievements-list-text">Happy Clients</span>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-text">Dragan Vukman 2022 - All Rights Reserved</p>
+          <a href="/" class="footer-brand">
+            <img
+              src="{{ url_for('static', filename='images/site-logo.svg') }}"
+              alt="Three square box logo"
+            />
+          </a>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/" class="footer-socials-link">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.twitter.com/" class="footer-socials-link"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://www.github.com/" class="footer-socials-link"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/" class="footer-socials-link">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

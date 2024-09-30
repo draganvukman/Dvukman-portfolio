@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/favicon.png') }}"
+      type="image/x-icon"
+    />
+    <title>Dragan Vukman - Contact</title>
+    <!-- Font Awesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <div class="header-content">
+            <a href="/" class="header-logo">
+              <img
+                src="{{ url_for('static', filename='images/site-logo.svg') }}"
+                alt="Three square box logo"
+              />
+            </a>
+            <nav class="header-navbar">
+              <a href="/" class="header-nav-link">Home</a>
+              <a href="/about" class="header-nav-link">About</a>
+              <a href="/portfolio" class="header-nav-link">Portfolio</a>
+              <a href="/blogs" class="header-nav-link">Blogs</a>
+              <a href="/hobbies" class="header-nav-link">Hobbies</a>
+              <a href="/gallery" class="header-nav-link">Gallery</a>
+              <a href="/resume" class="header-nav-link">Resume</a>
+              <a href="/contact" class="header-nav-link active">Contact</a>
+            </nav>
+            <a href="/contact" class="header-nav-btn">Hire Me</a>
+            <i class="mobile-icon fas fa-bars"></i>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main-Content -->
+      <main class="main">
+        <div class="container">
+          <!-- Contact-Section -->
+          <section class="contact">
+            <div class="contact-content">
+              <h2 class="contact-content-title">Don’t be Shy!</h2>
+              <h3 class="contact-content-subtitle">Get in Touch</h3>
+              <p class="contact-content-text">
+                You can contact me via email or social media. I will try to
+                respond as soon as possible. Thank you!
+              </p>
+              <img
+                src="{{ url_for('static', filename='images/contact.svg') }}"
+                alt="A person messaging"
+              />
+            </div>
+            {% if success %}
+            <p>Thank you for contacting me!</p>
+            {% else %}
+            <form
+              class="contact-form"
+              id="form"
+              method="post"
+              action="/contact"
+            >
+              <div class="form-control">
+                <label for="name"><i class="fas fa-user"></i></label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="John Doe"
+                />
+                <small>Error</small>
+              </div>
+              <div class="form-control">
+                <label for="email"><i class="fas fa-envelope"></i></label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="johndoe@gmail.com"
+                />
+                <small>Error</small>
+              </div>
+              <div class="form-control">
+                <label for="message"><i class="fas fa-comment-alt"></i></label>
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Message Here"
+                ></textarea>
+                <small>Error</small>
+              </div>
+              <div class="form-control">
+                <button class="btn-submit" type="submit">Submit</button>
+              </div>
+            </form>
+            {% endif %}
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-text">Dragan Vukman 2022 - All Rights Reserved</p>
+          <a href="/" class="footer-brand">
+            <img
+              src="{{ url_for('static', filename='images/site-logo.svg') }}"
+              alt="Three square box logo"
+            />
+          </a>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/" class="footer-socials-link">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.twitter.com/" class="footer-socials-link"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://www.github.com/" class="footer-socials-link"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/" class="footer-socials-link">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

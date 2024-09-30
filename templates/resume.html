@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/favicon.png') }}"
+      type="image/x-icon"
+    />
+    <title>Dragan Vukman - Resume</title>
+    <!-- Font Awesome Icon -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header class="header">
+        <div class="container">
+          <div class="header-content">
+            <a href="/" class="header-logo">
+              <img
+                src="{{ url_for('static', filename='images/site-logo.svg') }}"
+                alt="Three square box logo"
+              />
+            </a>
+            <nav class="header-navbar">
+              <a href="/" class="header-nav-link">Home</a>
+              <a href="/about" class="header-nav-link">About</a>
+              <a href="/portfolio" class="header-nav-link">Portfolio</a>
+              <a href="/blogs" class="header-nav-link">Blogs</a>
+              <a href="/hobbies" class="header-nav-link">Hobbies</a>
+              <a href="/gallery" class="header-nav-link">Gallery</a>
+              <a href="/resume" class="header-nav-link active">Resume</a>
+              <a href="/contact" class="header-nav-link">Contact</a>
+            </nav>
+            <a href="/contact" class="header-nav-btn">Hire Me</a>
+            <i class="mobile-icon fas fa-bars"></i>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main-Content -->
+      <main class="main">
+        <div class="container">
+          <!-- Resume-Section -->
+          <section class="resume">
+            <div class="resume-box">
+              <h2 class="resume-box-title">My Resume!</h2>
+              <p class="resume-box-text">
+                I am doing a course of Full Stack Software Development, UCD in
+                Dublin, Ireland. I have experience in Software Development,
+                Digital Marketing (Facebook Marketing, SEO, Event
+                Management),CRM software managing (Email Marketing, Marketing &
+                sales panel establishing, email tracking & follow up), Product
+                Life Cycle Management and Quality Control & Strategic Planning.
+              </p>
+              <a
+                href="{{ url_for('static', filename='images/Dragan Vukman.pdf') }}"
+                class="resume-btn"
+              >
+                Resume
+                <i class="fas fa-file-download"></i>
+              </a>
+            </div>
+            <div class="resume-content">
+              <div class="resume-image">
+                <img
+                  src="{{ url_for('static', filename='images/resume-page.svg') }}"
+                  alt="Vector Visual showing a resume skeleton"
+                />
+              </div>
+              <div class="resume-skills">
+                <h3 class="resume-skills-title">Coding Skills</h3>
+                <ul class="resume-skills-list">
+                  <li class="resume-skills-list-item">
+                    <span class="resume-skills-list-item-name">HTML</span>
+                    <div class="resume-skills-list-item-circles">
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle"></span>
+                    </div>
+                    <span class="resume-skills-list-item-value">95%</span>
+                  </li>
+                  <li class="resume-skills-list-item">
+                    <span class="resume-skills-list-item-name">CSS</span>
+                    <div class="resume-skills-list-item-circles">
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle"></span>
+                    </div>
+                    <span class="resume-skills-list-item-value">90%</span>
+                  </li>
+                  <li class="resume-skills-list-item">
+                    <span class="resume-skills-list-item-name">JavaScript</span>
+                    <div class="resume-skills-list-item-circles">
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle"></span>
+                    </div>
+                    <span class="resume-skills-list-item-value">95%</span>
+                  </li>
+                  <li class="resume-skills-list-item">
+                    <span class="resume-skills-list-item-name">React</span>
+                    <div class="resume-skills-list-item-circles">
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle"></span>
+                      <span class="resume-skills-list-item-circle"></span>
+                      <span class="resume-skills-list-item-circle"></span>
+                    </div>
+                    <span class="resume-skills-list-item-value">70%</span>
+                  </li>
+                  <li class="resume-skills-list-item">
+                    <span class="resume-skills-list-item-name">Node</span>
+                    <div class="resume-skills-list-item-circles">
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle fill"></span>
+                      <span class="resume-skills-list-item-circle"></span>
+                      <span class="resume-skills-list-item-circle"></span>
+                    </div>
+                    <span class="resume-skills-list-item-value">85%</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-text">Dragan Vukman 2022 - All Rights Reserved</p>
+          <a href="/" class="footer-brand">
+            <img
+              src="{{ url_for('static', filename='images/site-logo.svg') }}"
+              alt="Three square box logo"
+            />
+          </a>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/" class="footer-socials-link">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.twitter.com/" class="footer-socials-link"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a href="https://www.github.com/" class="footer-socials-link"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/" class="footer-socials-link">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
